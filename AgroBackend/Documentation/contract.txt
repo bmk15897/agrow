@@ -1,0 +1,312 @@
+
+
+To see the list of all apis
+
+GET
+
+http://0.0.0.0:5000/site-map
+
+Output
+
+{
+    "result": [
+        [
+            "/viewMyCropEntriesForWhatsappBot",
+            "viewMyCropEntrieForWhatsappBots"
+        ],
+        [
+            "/addMyCropEntryForWhatsappBot",
+            "addMyCropEntryForWhatsappBot"
+        ],
+        [
+            "/viewAllCropEntries",
+            "viewAllCropEntries"
+        ],
+        [
+            "/viewMyCropEntries",
+            "viewMyCropEntries"
+        ],
+        [
+            "/addMyCropEntry",
+            "addMyCropEntry"
+        ],
+        [
+            "/site-map",
+            "site_map"
+        ],
+        [
+            "/signup",
+            "signup"
+        ],
+        [
+            "/login",
+            "login"
+        ],
+        [
+            "/",
+            "index"
+        ]
+    ]
+}
+
+
+
+
+
+login sample input 
+POST
+http://0.0.0.0:5000/login
+
+json
+
+{
+    "phone":"7555555555",
+    "otp":"1234"
+}
+
+
+output
+
+{
+    "_id": "7555555555",
+    "_rev": "3-4a5b0dcc50089b45547aa1af4b0bfdea",
+    "areaOfLand": "2.5",
+    "crop_entries": [
+        {
+            "areaOfLand": 1,
+            "cropName": "Wheat",
+            "district": "Ahmednagar",
+            "harvestPeriod": "August (Mid) 2021",
+            "quantitySown": 60,
+            "state": "Maharashtra",
+            "yieldExpected": 600
+        }
+    ],
+    "district": "Ahmednagar",
+    "name": "Bharati",
+    "state": "Maharashtra"
+}
+
+
+
+signup sample input
+POST
+http://0.0.0.0:5000/signup
+
+json
+
+{
+    "name" :"Bharati",
+    "district" :"Ahmednagar",
+    "state" : "Maharashtra",
+    "phone" : "7555555556",
+    "areaOfLand" : 2.5
+}
+
+
+output
+
+{
+    "result": "Signup successful! Now login with your new User-id."
+}
+
+
+
+addCropEntry sample input 
+POST
+http://0.0.0.0:5000/addMyCropEntry
+
+json
+
+{
+    "cropName" :"Rice",
+    "district" :"Ahmednagar",
+    "state" : "Maharashtra",
+    "areaOfLand" : 1,
+    "quantitySown":60,
+    "yieldExpected" : 600,
+    "harvestPeriod" :"August (Mid) 2021"
+}
+
+
+output
+
+{
+    "result": [
+        {
+            "areaOfLand": 1,
+            "cropName": "Wheat",
+            "district": "Ahmednagar",
+            "harvestPeriod": "August (Mid) 2021",
+            "quantitySown": 60,
+            "state": "Maharashtra",
+            "yieldExpected": 600
+        },
+        {
+            "areaOfLand": 1,
+            "cropName": "Rice",
+            "district": "Ahmednagar",
+            "harvestPeriod": "August (Mid) 2021",
+            "quantitySown": 60,
+            "state": "Maharashtra",
+            "yieldExpected": 600
+        }
+    ]
+}
+
+
+viewMyCropEntries no input as it is a get request
+
+GET
+
+http://0.0.0.0:5000/viewMyCropEntries
+
+
+output 
+
+{
+    "result": [
+        {
+            "areaOfLand": 1,
+            "cropName": "Wheat",
+            "district": "Ahmednagar",
+            "harvestPeriod": "August (Mid) 2021",
+            "quantitySown": 60,
+            "state": "Maharashtra",
+            "yieldExpected": 600
+        }
+    ]
+}
+
+viewAllCropEntries sample input
+
+GET
+
+http://0.0.0.0:5000/viewAllCropEntries
+
+Output
+
+
+{
+    "result": [
+        {
+            "areaOfLand": 1,
+            "cropName": "Wheat",
+            "district": "Ahmednagar",
+            "harvestPeriod": "August (Mid) 2021",
+            "quantitySown": 60,
+            "state": "Maharashtra",
+            "yieldExpected": 600
+        },
+        {
+            "areaOfLand": 1,
+            "cropName": "Rice",
+            "district": "Ahmednagar",
+            "harvestPeriod": "August (Mid) 2021",
+            "quantitySown": 60,
+            "state": "Maharashtra",
+            "yieldExpected": 600
+        },
+        {
+            "areaOfLand": 0.5,
+            "cropName": "Jowar",
+            "district": "Ahmednagar",
+            "harvestPeriod": "August (Mid) 2021",
+            "quantitySown": 60,
+            "state": "Maharashtra",
+            "yieldExpected": 600
+        }
+    ]
+}
+
+
+
+FOR WHATSAPP BOT -------------------------------------------------------------------------------
+
+
+viewMyCropEntriesForWhatsappBot sample
+
+POST
+
+http://0.0.0.0:5000/viewMyCropEntriesForWhatsappBot
+
+Input
+
+{
+    "phone": "7555555555"
+}
+
+
+Output
+
+{
+    "result": [
+        {
+            "areaOfLand": 1,
+            "cropName": "Wheat",
+            "district": "Ahmednagar",
+            "harvestPeriod": "August (Mid) 2021",
+            "quantitySown": 60,
+            "state": "Maharashtra",
+            "yieldExpected": 600
+        }
+    ]
+}
+
+
+addMyCropEntryForWhatsappBot sample
+
+POST
+
+http://0.0.0.0:5000/addMyCropEntryForWhatsappBot
+
+
+Input
+
+
+{
+    "phone" : "7555555555",
+    "cropName" :"Jowar",
+    "district" :"Ahmednagar",
+    "state" : "Maharashtra",
+    "areaOfLand" : 0.5,
+    "quantitySown":60,
+    "yieldExpected" : 600,
+    "harvestPeriod" :"August (Mid) 2021"
+}
+
+
+
+Output
+
+{
+    "result": [
+        {
+            "areaOfLand": 1,
+            "cropName": "Wheat",
+            "district": "Ahmednagar",
+            "harvestPeriod": "August (Mid) 2021",
+            "quantitySown": 60,
+            "state": "Maharashtra",
+            "yieldExpected": 600
+        },
+        {
+            "areaOfLand": 1,
+            "cropName": "Rice",
+            "district": "Ahmednagar",
+            "harvestPeriod": "August (Mid) 2021",
+            "quantitySown": 60,
+            "state": "Maharashtra",
+            "yieldExpected": 600
+        },
+        {
+            "areaOfLand": 0.5,
+            "cropName": "Jowar",
+            "district": "Ahmednagar",
+            "harvestPeriod": "August (Mid) 2021",
+            "quantitySown": 60,
+            "state": "Maharashtra",
+            "yieldExpected": 600
+        }
+    ]
+}
