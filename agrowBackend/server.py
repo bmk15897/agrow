@@ -39,9 +39,9 @@ def signup():
 		if(len(sampleOTP)==0 or not user):
 			return jsonify(result = 'Please fill up all the fields')
 		else:
+			user["phone"] = "whatsapp:+91"+user["phone"]
 			doc_exists = user["phone"] in my_database
 			
-
 			if(doc_exists):
 				return jsonify(result='User-id already exists! Please choose a different User-id.')
 			else:
@@ -64,7 +64,7 @@ def login():
 		
 		sampleOTPlist = ["1234","5678","0000"]
 		my_database = g.db['farmer_database']
-		
+		user["phone"] = "whatsapp:+91"+user["phone"]
 		doc_exists = user["phone"] in my_database
 		if not doc_exists:
 			return jsonify(result="Invalid User-id")
