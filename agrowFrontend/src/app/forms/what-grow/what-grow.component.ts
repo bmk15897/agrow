@@ -21,6 +21,90 @@ export class WhatGrowComponent implements OnInit {
   masterData = [];
   filterData = [];
 
+  priceChartData = [];
+  priceChartLabels = [];
+
+  priceChartOptions = {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    },
+    legend: {
+      display: false
+    },
+    elements: {
+      point: {
+        radius: 0
+      }
+    }
+  };
+
+  priceChartColors = [
+    {
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)'
+      ]
+    }
+  ];
+
+  produceChartData = [];
+  produceChartLabels = [];
+
+  produceChartOptions = {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    },
+    legend: {
+      display: false
+    },
+    elements: {
+      point: {
+        radius: 0
+      }
+    }
+  };
+
+  produceChartColors = [
+    {
+      backgroundColor: [
+        'rgba(255, 99, 132, 0.2)',
+        'rgba(54, 162, 235, 0.2)',
+        'rgba(255, 206, 86, 0.2)',
+        'rgba(75, 192, 192, 0.2)',
+        'rgba(153, 102, 255, 0.2)',
+        'rgba(255, 159, 64, 0.2)'
+      ],
+      borderColor: [
+        'rgba(255,99,132,1)',
+        'rgba(54, 162, 235, 1)',
+        'rgba(255, 206, 86, 1)',
+        'rgba(75, 192, 192, 1)',
+        'rgba(153, 102, 255, 1)',
+        'rgba(255, 159, 64, 1)'
+      ]
+    }
+  ];
+
   sowYear: Array <any> = [
     '2021',
     '2022',
@@ -993,7 +1077,8 @@ export class WhatGrowComponent implements OnInit {
   priceData = [];
 
   produceColumnDefs = [
-    {  field:'Crop' },
+    {  field:'Crop' , filter: true},
+    { field: 'Production', filter: true }
   ];
   produceRowData = [];
 
@@ -1001,6 +1086,8 @@ export class WhatGrowComponent implements OnInit {
     {  field:'Crop', filter: true },
     {  field:'modalPrice', filter: true },
   ];
+
+
   priceRowData = [];
 
   topPriceRowData = [];
@@ -1126,12 +1213,46 @@ export class WhatGrowComponent implements OnInit {
     }
 
     this.topProduceRowData.sort( (a,b) => {
-      return (a.Production > b.Production) ? -1 : 1;
+      return (parseInt(a.Production) > parseInt(b.Production) ) ? -1 : 1;
     });
 
     this.topPriceRowData.sort( (a,b) =>  {
       return (a.modalPrice > b.modalPrice) ? -1 : 1;
     });
+
+    let priceBarData = [];
+    let priceBarLabel = [];
+
+    for(let i=0; i<this.topPriceRowData.length; ++i) {
+      priceBarData.push(this.topPriceRowData[i].modalPrice)
+      priceBarLabel.push(this.topPriceRowData[i].Crop)
+    }
+
+    this.priceChartData = [{
+      label: 'Daily Mandi Price (Per Quintal)',
+      data: priceBarData,
+      borderWidth: 1,
+      fill: false
+    }];
+  
+    this.priceChartLabels = priceBarLabel;
+
+    let produceBarData = [];
+    let produceBarLabel = [];
+
+    for(let i=0; i<this.topProduceRowData.length; ++i) {
+      produceBarData.push(this.topProduceRowData[i].Production)
+      produceBarLabel.push(this.topProduceRowData[i].Crop)
+    }
+
+    this.produceChartData = [{
+      label: 'Production (In Acres)',
+      data: produceBarData,
+      borderWidth: 1,
+      fill: false
+    }];
+  
+    this.produceChartLabels = produceBarLabel;
 
     this.submitClicked = true;
 

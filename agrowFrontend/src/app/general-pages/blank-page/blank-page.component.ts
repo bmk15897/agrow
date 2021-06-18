@@ -11,11 +11,13 @@ import { Observable } from 'rxjs';
 export class BlankPageComponent implements OnInit {
 
   masterData = [];
-  cropList = [
+  cropList = [];
+
+  showCrop = [
     "Potato",
     "Wheat",
     "Rice"
-  ];
+  ]
 
   yearPeriod = [
     '2020',
@@ -24,8 +26,12 @@ export class BlankPageComponent implements OnInit {
 
   uniqueCropList = [];
   filterData = [];
-  potatoData = [];
-  tomatoData = [];
+  potatoData2020 = [];
+  wheatData2020 = [];
+  riceData2020 = [];
+  potatoData2021 = [];
+  wheatData2021 = [];
+  riceData2021 = [];
   transData = [];
 
   searchForm: FormGroup;
@@ -39,9 +45,9 @@ export class BlankPageComponent implements OnInit {
   ngOnInit() {
     // ---------------------------------
 
-    this.searchForm = new FormControl({
-      cropName : new FormControl('', Validators.required),
-      timePeriod: new FormControl('')
+    this.searchForm = new FormGroup({
+      cropName : new FormControl('Potato', Validators.required),
+      timePeriod: new FormControl('2020')
     })
 
     this.getJSON().subscribe(data => {
@@ -58,46 +64,73 @@ export class BlankPageComponent implements OnInit {
        
       //  console.log('Unique crops: ' + this.uniqueCropList.length  + ' ' + this.uniqueCropList); // ['a', 1, 2, '1']
 
-      this.potatoData = [
-        ['madhya pradesh', Math.round(Math.random()*20) ],
-        ['uttar pradesh', 1],
-        ['karnataka', 2],
-        ['nagaland', 3],
-        ['bihar', 4],
-        ['lakshadweep', 5],
-        ['andaman and nicobar', 6],
-        ['assam', 14],
-        ['west bengal', 8],
-        ['puducherry', Math.round(Math.random()*20)],
-        ['daman and diu', 10],
-        ['gujarat', Math.round(Math.random()*20)],
-        ['rajasthan', 12],
-        ['dadara and nagar havelli', 13],
-        ['chhattisgarh', 14],
-        ['tamil nadu', 15],
-        ['chandigarh', Math.round(Math.random()*20)],
-        ['punjab', 17],
-        ['haryana', 18],
-        ['andhra pradesh', 19],
-        ['maharashtra', 20],
-        ['himachal pradesh', 21],
-        ['meghalaya', Math.round(Math.random()*20)],
-        ['kerala', 23],
-        ['telangana', 40],
-        ['mizoram', 24],
-        ['tripura', 31],
-        ['manipur', 6],
-        ['arunanchal pradesh', 28],
-        ['jharkhand', Math.round(Math.random()*20)],
-        ['goa', 12],
-        ['nct of delhi', 31],
-        ['odisha', 56],
-        ['jammu and kashmir', 12],
-        ['sikkim', 10],
-        ['uttarakhand', Math.round(Math.random()*20)]
+    // this.submit("Tomato")
+
+    this.showData()
+  
+    });
+  }
+
+  showData() {
+    console.log('searchForm: ' + JSON.stringify(this.searchForm.value))
+
+    // cropName: FormControl;
+    // timePeriod: FormControl;
+
+    // showCrop = [
+    //   "Potato",
+    //   "Wheat",
+    //   "Rice"
+    // ]
+  
+    // yearPeriod = [
+    //   '2020',
+    //   '2021'
+    // ]
+
+    let cropName = this.searchForm.value.cropName;
+    let period = this.searchForm.value.timePeriod;
+
+    this.potatoData2020 = [
+      ['madhya pradesh', Math.round(Math.random()*20) ],
+      ['uttar pradesh', 1],
+      ['karnataka', 2],
+      ['nagaland', 3],
+      ['bihar', 4],
+      ['lakshadweep', 5],
+      ['andaman and nicobar', 6],
+      ['assam', 14],
+      ['west bengal', 8],
+      ['puducherry', Math.round(Math.random()*20)],
+      ['daman and diu', 10],
+      ['gujarat', Math.round(Math.random()*20)],
+      ['rajasthan', 12],
+      ['dadara and nagar havelli', 13],
+      ['chhattisgarh', 14],
+      ['tamil nadu', 15],
+      ['chandigarh', Math.round(Math.random()*20)],
+      ['punjab', 17],
+      ['haryana', 18],
+      ['andhra pradesh', 19],
+      ['maharashtra', 20],
+      ['himachal pradesh', 21],
+      ['meghalaya', Math.round(Math.random()*20)],
+      ['kerala', 23],
+      ['telangana', 40],
+      ['mizoram', 24],
+      ['tripura', 31],
+      ['manipur', 6],
+      ['arunanchal pradesh', 28],
+      ['jharkhand', Math.round(Math.random()*20)],
+      ['goa', 12],
+      ['nct of delhi', 31],
+      ['odisha', 56],
+      ['jammu and kashmir', 12],
+      ['sikkim', 10],
+      ['uttarakhand', Math.round(Math.random()*20)]
     ];
 
-    this.tomatoData = [
+    this.wheatData2020 = [
       ['madhya pradesh', 15],
       ['uttar pradesh', 5],
       ['karnataka', Math.round(Math.random()*20)],
@@ -134,15 +167,220 @@ export class BlankPageComponent implements OnInit {
       ['jammu and kashmir', 33],
       ['sikkim', Math.round(Math.random()*20)],
       ['uttarakhand', 35]
-  ];
+    ];
 
-  console.log(this.potatoData)
+    this.riceData2020 = [
+      ['madhya pradesh', Math.round(Math.random()*20) ],
+      ['uttar pradesh', Math.round(Math.random()*20)],
+      ['karnataka', 2],
+      ['nagaland', 13],
+      ['bihar', 4],
+      ['lakshadweep', Math.round(Math.random()*20)],
+      ['andaman and nicobar', 6],
+      ['assam', 14],
+      ['west bengal', 28],
+      ['puducherry', Math.round(Math.random()*20)],
+      ['daman and diu', 10],
+      ['gujarat', Math.round(Math.random()*20)],
+      ['rajasthan', Math.round(Math.random()*20)],
+      ['dadara and nagar havelli', 13],
+      ['chhattisgarh', 33],
+      ['tamil nadu', 15],
+      ['chandigarh', Math.round(Math.random()*20)],
+      ['punjab', Math.round(Math.random()*20)],
+      ['haryana', 18],
+      ['andhra pradesh', Math.round(Math.random()*20)],
+      ['maharashtra', 20],
+      ['himachal pradesh', 21],
+      ['meghalaya', Math.round(Math.random()*20)],
+      ['kerala', 23],
+      ['telangana', 40],
+      ['mizoram', 24],
+      ['tripura', 15],
+      ['manipur', 15],
+      ['arunanchal pradesh', 28],
+      ['jharkhand', Math.round(Math.random()*20)],
+      ['goa', 21],
+      ['nct of delhi', 15],
+      ['odisha', 21],
+      ['jammu and kashmir', 24],
+      ['sikkim', 18],
+      ['uttarakhand', Math.round(Math.random()*20)]
+    ];
 
-  console.log(this.tomatoData)
+    this.potatoData2021 = [
+      ['madhya pradesh', Math.round(Math.random()*20) ],
+      ['uttar pradesh', Math.round(Math.random()*20)],
+      ['karnataka', 28],
+      ['nagaland', 14],
+      ['bihar', 4],
+      ['lakshadweep', Math.round(Math.random()*20)],
+      ['andaman and nicobar', 6],
+      ['assam', 4],
+      ['west bengal', 28],
+      ['puducherry', Math.round(Math.random()*20)],
+      ['daman and diu', 10],
+      ['gujarat', Math.round(Math.random()*20)],
+      ['rajasthan', Math.round(Math.random()*20)],
+      ['dadara and nagar havelli', 24],
+      ['chhattisgarh', 8],
+      ['tamil nadu', 24],
+      ['chandigarh', Math.round(Math.random()*20)],
+      ['punjab', Math.round(Math.random()*50)],
+      ['haryana', 12],
+      ['andhra pradesh', Math.round(Math.random()*20)],
+      ['maharashtra', Math.round(Math.random()*20)],
+      ['himachal pradesh', 21],
+      ['meghalaya', Math.round(Math.random()*20)],
+      ['kerala', 28],
+      ['telangana', 40],
+      ['mizoram', 24],
+      ['tripura', 12],
+      ['manipur', Math.round(Math.random()*20)],
+      ['arunanchal pradesh', 28],
+      ['jharkhand', Math.round(Math.random()*20)],
+      ['goa', 22],
+      ['nct of delhi', 15],
+      ['odisha', 21],
+      ['jammu and kashmir', 5],
+      ['sikkim', 8],
+      ['uttarakhand', Math.round(Math.random()*20)]
+    ];
 
-  this.submit("Tomato")
+    this.wheatData2021 = [
+      ['madhya pradesh', 15],
+      ['uttar pradesh', 5],
+      ['karnataka', Math.round(Math.random()*20)],
+      ['nagaland', 3],
+      ['bihar', 4],
+      ['lakshadweep', Math.round(Math.random()*20)],
+      ['andaman and nicobar', 6],
+      ['assam', 17],
+      ['west bengal', 8],
+      ['puducherry', Math.round(Math.random()*23)],
+      ['daman and diu', 12],
+      ['gujarat', 11],
+      ['rajasthan', 12],
+      ['dadara and nagar havelli', 13],
+      ['chhattisgarh', 14],
+      ['tamil nadu', Math.round(Math.random()*30)],
+      ['chandigarh', Math.round(Math.random()*20)],
+      ['punjab', 17],
+      ['haryana', 19],
+      ['andhra pradesh', 19],
+      ['maharashtra', 30],
+      ['himachal pradesh', Math.round(Math.random()*20)],
+      ['meghalaya', 22],
+      ['kerala', 15],
+      ['telangana', 24],
+      ['mizoram', 15],
+      ['tripura', Math.round(Math.random()*30)],
+      ['manipur', 27],
+      ['arunanchal pradesh', 28],
+      ['jharkhand', 9],
+      ['goa', 18],
+      ['nct of delhi', Math.round(Math.random()*20)],
+      ['odisha', 23],
+      ['jammu and kashmir', 33],
+      ['sikkim', Math.round(Math.random()*20)],
+      ['uttarakhand', Math.round(Math.random()*30)]
+    ];
+
+    this.riceData2021 = [
+      ['madhya pradesh', Math.round(Math.random()*20) ],
+      ['uttar pradesh', 16],
+      ['karnataka', 22],
+      ['nagaland', 3],
+      ['bihar', 14],
+      ['lakshadweep', 15],
+      ['andaman and nicobar', 6],
+      ['assam', 14],
+      ['west bengal', 8],
+      ['puducherry', Math.round(Math.random()*20)],
+      ['daman and diu', 10],
+      ['gujarat', Math.round(Math.random()*20)],
+      ['rajasthan', 12],
+      ['dadara and nagar havelli', 13],
+      ['chhattisgarh', 24],
+      ['tamil nadu', 15],
+      ['chandigarh', Math.round(Math.random()*20)],
+      ['punjab', 17],
+      ['haryana', 18],
+      ['andhra pradesh', 19],
+      ['maharashtra', 20],
+      ['himachal pradesh', 21],
+      ['meghalaya', Math.round(Math.random()*20)],
+      ['kerala', 23],
+      ['telangana', 14],
+      ['mizoram', 24],
+      ['tripura', 16],
+      ['manipur', 6],
+      ['arunanchal pradesh', 28],
+      ['jharkhand', Math.round(Math.random()*20)],
+      ['goa', 12],
+      ['nct of delhi', 15],
+      ['odisha', 22],
+      ['jammu and kashmir', 12],
+      ['sikkim', 10],
+      ['uttarakhand', Math.round(Math.random()*20)]
+    ];
+
+    let data = [];
+
+    if(cropName == 'Potato' && period == '2021') {
+      data = this.potatoData2021;
+    }
+    else if(cropName == 'Wheat' && period == '2021') {
+      data = this.wheatData2021;
+    } 
+    else if(cropName == 'Rice' && period == '2021') {
+      data = this.riceData2021;
+    }
+    else if(cropName == 'Potato' && period == '2020') {
+      data = this.potatoData2020;
+    }
+    else if(cropName == 'Wheat' && period == '2020') {
+      data = this.wheatData2020;
+    } 
+    else if(cropName == 'Rice' && period == '2020') {
+      data = this.riceData2020;
+    }
+
+    Highcharts.mapChart('container', {
+      chart: {
+          map: 'countries/in/custom/in-all-disputed'
+      },
   
-    });
+      title: {
+          text: 'Yearly Crop Yield'
+      },
+  
+      mapNavigation: {
+          enabled: true,
+          buttonOptions: {
+              verticalAlign: 'bottom'
+          }
+      },
+  
+      colorAxis: {
+          min: 0
+      },
+  
+      series: [{
+          data: data,
+          name: cropName,
+          states: {
+              hover: {
+                  color: '#BADA55'
+              }
+          },
+          dataLabels: {
+              enabled: true,
+              format: '{point.name}'
+          }
+      }]
+  });
+
   }
 
   submit(cropName) {
@@ -247,44 +485,8 @@ export class BlankPageComponent implements OnInit {
       }
     }
 
-    console.log('Filter Data: ' + JSON.stringify(this.filterData) )
-
-    console.log('Trans Data: ' + JSON.stringify(this.transData) )
-
-    Highcharts.mapChart('container', {
-      chart: {
-          map: 'countries/in/custom/in-all-disputed'
-      },
-  
-      title: {
-          text: 'Yearly Crop Yield'
-      },
-  
-      mapNavigation: {
-          enabled: true,
-          buttonOptions: {
-              verticalAlign: 'bottom'
-          }
-      },
-  
-      colorAxis: {
-          min: 0
-      },
-  
-      series: [{
-          data: this.potatoData,
-          name: cropName,
-          states: {
-              hover: {
-                  color: '#BADA55'
-              }
-          },
-          dataLabels: {
-              enabled: true,
-              format: '{point.name}'
-          }
-      }]
-  });
+    // console.log('Filter Data: ' + JSON.stringify(this.filterData) )
+    // console.log('Trans Data: ' + JSON.stringify(this.transData) )
 
   }
 
