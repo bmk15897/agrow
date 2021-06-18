@@ -1,4 +1,5 @@
 from flask import Flask, render_template,request,g,flash,redirect,url_for,jsonify,json,session
+from flask_cors import CORS, cross_origin
 from datetime import datetime,timedelta
 from cloudant.client import Cloudant
 from cloudant.error import CloudantException
@@ -7,6 +8,8 @@ from cloudant.result import Result, ResultByKey
 
 #initialising app
 app = Flask(__name__)
+cord = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 app.secret_key = 'some_secret'
 #connecting to DB before every request
 
@@ -26,11 +29,13 @@ def teardown_request(exception):
 
 
 @app.route('/')
+@cross_origin()
 def index():
   return "Hello"
 
 
 @app.route('/signup', methods=['POST'])
+@cross_origin()
 def signup():
 	if(request.method=='POST'):
 		my_database = g.db['farmer_database']
@@ -58,6 +63,7 @@ def signup():
 			
 #clicking on Login
 @app.route('/login',methods=['POST'])
+@cross_origin()
 def login():
 	if(request.method=='POST'):
 		user = request.get_json()
@@ -78,6 +84,7 @@ def login():
 			
 
 @app.route('/viewMyCropEntries',methods=['GET','POST'])
+@cross_origin()
 def viewMyCropEntries():
 	phone = session.get('phone',None)
 
@@ -93,16 +100,23 @@ def viewMyCropEntries():
 
 
 @app.route('/addMyCropEntry',methods=['POST'])
+@cross_origin()
 def addMyCropEntry():
 	if(request.method=='POST'):
-		phone = session.get('phone',None)
-		print(phone)
+		#phone = session.get('phone',None)
+		#print(phone)
 
 		cropEntryJSON = request.get_json()
 		print(cropEntryJSON)
 		if(not cropEntryJSON):
 			return jsonify(result = 'Please fill up all the fields')
 		else:
+			phone = cropEntryJSON['phone']
+			phone='whatsapp:+91'+phone
+			print('Phone: ' + phone)
+			del cropEntryJSON['phone']
+			print("Deleting phone")
+			print(cropEntryJSON)
 			my_database = g.db['farmer_database']
 			doc_exists = phone in my_database
 			if not doc_exists:
@@ -118,6 +132,7 @@ def addMyCropEntry():
 
 
 @app.route('/viewAllCropEntries',methods=['GET','POST'])
+@cross_origin()
 def viewAllCropEntries():
 	
 	my_database = g.db['farmer_database']
@@ -132,6 +147,7 @@ def viewAllCropEntries():
 
 
 @app.route('/viewMyCropEntriesForWhatsappBot',methods=['POST'])
+@cross_origin()
 def viewMyCropEntrieForWhatsappBots():
 	userJSON = request.get_json()
 	phone = userJSON['phone']
@@ -148,6 +164,7 @@ def viewMyCropEntrieForWhatsappBots():
 
 
 @app.route('/addMyCropEntryForWhatsappBot',methods=['POST'])
+@cross_origin()
 def addMyCropEntryForWhatsappBot():
 	if(request.method=='POST'):
 		
@@ -179,6 +196,7 @@ def has_no_empty_params(rule):
 
 
 @app.route("/site-map")
+@cross_origin()
 def site_map():
     links = []
     for rule in app.url_map.iter_rules():
