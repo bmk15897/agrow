@@ -5,7 +5,6 @@
 1. [Demo video](#demo-video)
 1. [AGROW UI Architecture](#agrow-ui-architecture)
 2. [AGROW Whatsapp Bot Architecture](#agrow-whatsapp-bot-architecture)
-3. [Long description](#long-description)
 4. [Project roadmap](#project-roadmap)
 5. [Getting started](#getting-started)
 6. [Built with](#built-with)
@@ -49,11 +48,11 @@ AGROW, a solution to maximise producitvity, enable crop diversification and assi
 
 ![AGrow Whatsapp Bot](https://github.com/bmk15897/agrow/blob/main/agrowWhatsappBot/AGrowWhatsappBotArchitectureWithDescription.png)
 
-#### Go Live Approach
+## Go Live Approach
 
 ![AGrow GoLive Approach](https://github.com/bmk15897/agrow/blob/main/Documentation/GoLiveApproach.png)
 
-#### Project roadmap
+## Project roadmap
 
 ![AGrow Logo](https://github.com/bmk15897/agrow/blob/main/Documentation/AGROWRoadmap.png)
 
