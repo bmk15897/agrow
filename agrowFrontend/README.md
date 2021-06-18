@@ -1,3 +1,6 @@
+# AGrow
+
+![AGrow UI Application](https://github.com/bmk15897/agrow/blob/main/agrowFrontend/AGrowAngularUIArchitecture.png)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
 

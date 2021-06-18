@@ -3,7 +3,7 @@
 
 1. [Short description](#short-description)
 1. [Demo video](#demo-video)
-1. [AGrow UI frontend Architecture](#agrow-ui-frontend-architecture)
+1. [AGrow UI Architecture](#agrow-ui-architecture)
 2. [AGrow Whatsapp Bot Architecture](#agrow-whatsapp-bot-architecture)
 3. [Long description](#long-description)
 4. [Project roadmap](#project-roadmap)
@@ -30,7 +30,7 @@ Technology can help bridge the gap between farmers and increase collaboration be
 
 [![Watch the video](someUrl)](someUrl)
 
-### AGrow UI frontend Architecture
+### AGrow UI Architecture
 
 ![AGrow UI Application](https://github.com/bmk15897/agrow/blob/main/agrowFrontend/AGrowAngularUIArchitecture.png)
 
