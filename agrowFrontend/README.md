@@ -1,17 +1,18 @@
-# AGrow
+# AGrow Angular UI
+
+## Preview
+
+[![N|Solid](https://github.com/bmk15897/agrow/blob/main/agrowFrontend/AngularUIScreenshot.png)](https://github.com/bmk15897/agrow/blob/main/agrowFrontend/AngularUIScreenshot.png)
+
+## Architecture
 
 ![AGrow UI Application](https://github.com/bmk15897/agrow/blob/main/agrowFrontend/AGrowAngularUIArchitecture.png)
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
-
-
-[![N|Solid](preview.jpg)](https://bootstrapdash.com/demo/purple-angular-free/preview/dashboard/)
 
 ### Prerequisites
 
 Installations required - 
 
-- [npm] (https://www.npmjs.com/)
+- [npm](https://www.npmjs.com/)
 - [Angular CLI](https://github.com/angular/angular-cli)
 
 ### Installing Angular CLI
