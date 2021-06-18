@@ -38,7 +38,7 @@ AGROW, a solution to maximise producitvity, enable crop diversification and assi
 
 ## Demo video
 
-[![Watch the video](someUrl)](someUrl)
+[Watch the video](https://youtu.be/cB42Ze2iv9c)
 
 ## AGROW UI Architecture
 
