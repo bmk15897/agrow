@@ -54,7 +54,7 @@ AGROW, a solution to maximise producitvity, enable crop diversification and assi
 
 ## Project roadmap
 
-![AGrow Logo](https://github.com/bmk15897/agrow/blob/main/Documentation/AGROWRoadmap.png)
+![AGrow Roadmap](https://github.com/bmk15897/agrow/blob/main/Documentation/AGROWRoadmap.png)
 
 
 
