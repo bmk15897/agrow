@@ -1,7 +1,7 @@
 # AGROW : Support application for Farmers
 ## Team Name - GREP Tribe
 
-1. [Short description](#short-description)
+1. [Description](#description)
 1. [Demo video](#demo-video)
 1. [AGROW UI Architecture](#agrow-ui-architecture)
 2. [AGROW Whatsapp Bot Architecture](#agrow-whatsapp-bot-architecture)
@@ -12,7 +12,7 @@
 7. [Versioning](#versioning)
 8. [Contributors](#contributors)
 
-## Short description
+## Description
 
 ### What's the problem?
 
@@ -27,8 +27,13 @@ Improving query resolution. AGROW considers geographical mapping and provides se
 
 AGROW would also support some key suitability goals like No Poverty and Decent Economic Growth.
 
+#### AGROW Sustainability
+
+The application will be free cost for the farmers for the first 6 months (from the date of registration) so we can build a customer base. Post which we plan to charge a subscription fee from them on a half-yearly/yearly basis and in parallel explore opportunities to tie-up with government services and NGOs.
 
 ### The idea
+
+AGROW, a solution to maximise producitvity, enable crop diversification and assist in better planning of harvest and improved ROI planner for the farmers.
 
 ![AGrow Logo](https://github.com/bmk15897/agrow/blob/main/Documentation/AGrowLogo.jpeg)
 
@@ -44,29 +49,15 @@ AGROW would also support some key suitability goals like No Poverty and Decent E
 
 ![AGrow Whatsapp Bot](https://github.com/bmk15897/agrow/blob/main/agrowWhatsappBot/AGrowWhatsappBotArchitectureWithDescription.png)
 
-## Long description
-
-#### Profiles 
-
-There are two User Profiles – Farmers and Admin. The Farmers can register through the mandatory phone OTP verification step (we are yet to implement this in real-time). Registration can also be done using our WhatsApp bot. All users will provide direct input into the system –Profile Information like basic details, locality, area of land, etc.
-Farmers looking for aggregated statistics on crops can look at the visualizations provided by our application and take an informed decision for the crop to be sown. They can enter their crop details which will in turn help other farmers using the application. They can also view/update their previous crop entries as per their need. There will be complete anonymity between farmers. 
-Admin can manage the users of the application.
-
-#### Languages
-
-Currently whatsapp bot is available in English and few of the regional languages. Meanwhile the Angular UI is available in English.
-
-#### Sustainability
-
-The application will be free cost for the farmers for the first 6 months (from the date of registration) so we can build a customer base. Post which we plan to charge a subscription fee for them on a half-yearly/yearly basis.
-
 #### Go Live Approach
 
-We will conduct awareness campaigns and training sessions across India. In order to build a database we will explore options of existing databases that contain information about farmers. Once we have data of at least 20K farmers per state we will target to roll out the application to  farmers.
+![AGrow GoLive Approach](https://github.com/bmk15897/agrow/blob/main/Documentation/GoLiveApproach.png)
 
-## Project roadmap
+#### Project roadmap
 
 ![AGrow Logo](https://github.com/bmk15897/agrow/blob/main/Documentation/AGROWRoadmap.png)
+
+
 
 ## Getting started
 
