@@ -14,20 +14,19 @@
 
 ## Short description
 
-We propose AGROW as a solution which is a multiplatform enabled application that enables farmers to plan their yield in an efficient and cost effective manner while maximizing earnings. It is a multilingual application, available in all regional languages in India. An easy to use application, which is accessible via a Chabot and on computer browsers. It eliminates the need of downloading another app and significantly saves time by excluding call-waiting times. 
-
-It sources most recent data from Open Government data platforms thus
-Improving query resolution. AGROW considers geographical mapping and provides seasonal crop recommendations based on current market trends and prices. This in turn enables crop diversification. It will eventually be a centralized data source, which enables analytical and statistical conclusions. 
-
-AGROW would also support some key suitability goals like No Poverty and Decent Economic Growth 
-
 ### What's the problem?
 
 Currently there are 150 million farmers in India and Agriculture is the primary occupation of 58% of the population. However, farmers are struggling for a decent economic growth. They have very limited guidance available on several aspects like crop diversification, modern farming techniques. 
 
 ### How can technology help?
 
-Technology can help bridge the gap between farmers and increase collaboration between them. Along with this, long waiting time for responses for Kisan Call Center can be reduced using the whatsapp bot as most of the generalised questions can be answered using the previously collected calls data.
+We propose AGROW as a solution which is a multiplatform enabled application that enables farmers to plan their yield in an efficient and cost effective manner while maximizing earnings. It is a multilingual application, available in all regional languages in India. An easy to use application, which is accessible via a Chabot and on computer browsers. It eliminates the need of downloading another app and significantly saves time by excluding call-waiting times. 
+
+It sources most recent data from Open Government data platforms thus
+Improving query resolution. AGROW considers geographical mapping and provides seasonal crop recommendations based on current market trends and prices. This in turn enables crop diversification. It will eventually be a centralized data source, which enables analytical and statistical conclusions. 
+
+AGROW would also support some key suitability goals like No Poverty and Decent Economic Growth.
+
 
 ### The idea
 
