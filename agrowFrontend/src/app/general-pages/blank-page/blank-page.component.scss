@@ -1,0 +1,33 @@
+#container {
+    height: 500px; 
+    min-width: 310px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+.loading {
+    margin-top: 10em;
+    text-align: center;
+    color: gray;
+}
+
+.wrap {
+    position: relative;
+    margin: 5px;
+    border: 1px solid black;
+}
+.left {
+    float: left;
+    background-color: #CCCC;
+    margin-right: 48px;
+    background-color: white;
+    padding-left: 50px;
+    padding-top: 50px;
+}
+.right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35px;
+    height: 48px;
+    background-color: white;
+}

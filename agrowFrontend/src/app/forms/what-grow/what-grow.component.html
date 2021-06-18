@@ -1,0 +1,119 @@
+<div class="page-header">
+    <h3 class="page-title">
+      What can I grow ?
+    </h3>
+  </div>
+  <div class="row">
+  
+    <div class="col-md-6 grid-margin stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <!-- <h4 class="card-title">What do I grow?</h4> -->
+          <!-- <p class="card-description">
+            What are you growing ?
+          </p> -->
+          <form class="forms-sample" [formGroup]="growForm">
+            
+            <div class="form-group">
+              <label>State *</label>
+              <div class="col-sm-9">
+                <select class="form-control" (change)="changeState($event.target.value)" formControlName="selState">
+                  <option *ngFor ="let state of stateList">{{ state.state }} </option>
+                </select>
+              </div>
+            </div>
+  
+            <div class="form-group">
+              <label>District *</label>
+              <div class="col-sm-9">
+                <select class="form-control" formControlName="selDist">
+                  <option *ngFor ="let dis of districts">{{ dis }} </option>
+                </select>
+              </div>
+            </div>
+  
+            <!-- ------------- -->
+  
+            <div class="form-group">
+              <label>Sowing period *</label>
+              <div class="col-sm-9">
+                <select class="form-control" formControlName="sowingPeriod">
+                  <option *ngFor ="let sow of sowTime" >{{ sow }} </option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+                <label>Sowing year *</label>
+                <div class="col-sm-9">
+                  <select class="form-control" formControlName="sowingYear">
+                    <option *ngFor ="let year of sowYear" >{{ year }} </option>
+                  </select>
+                </div>
+              </div>
+  
+            <button type="submit" class="btn btn-gradient-primary mr-2" (click)="submit()" [disabled]="!growForm.valid">Submit</button>
+  
+            <button class="btn btn-light" (click)="clearAll()">Cancel</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 grid-margin stretch-card" *ngIf="produceData.length > 1 || priceData.length > 1">
+      <div class="card">
+        <div class="card-body">
+          <!-- <h4 class="card-title">What do I grow?</h4> -->
+          
+          <p class="card-description">
+            <b>Here are some suggestions on what you can grow. The suggestion are provided based on the factors below:</b>
+          </p>
+          <ul>
+              <li>What people are growing around you</li>
+              <li>Demand for these crops in the market</li>
+              <li>Season in which you want to grow them</li>
+              <li>Current Mandi Price for them</li>
+         </ul>
+
+         <h4 *ngIf="topProduceRowData.length > 1"><b>Based on Demand </b></h4>
+
+            <ag-grid-angular
+                *ngIf="topProduceRowData.length > 1"
+                style="width: 40%; height: 300px; padding-bottom: 3%;"
+                class="ag-theme-alpine"
+                [rowData]="topProduceRowData"
+                [columnDefs]="produceColumnDefs"
+                class="ag-theme-alpine"
+            >
+            </ag-grid-angular>
+
+            <h4 *ngIf="topPriceRowData.length > 1"><b>Based on mandi prices (Modal price per quintal) </b></h4>
+
+            <ag-grid-angular
+                *ngIf="topPriceRowData.length > 1"
+                style="width: 70%; height: 300px; padding-bottom: 3%;"
+                class="ag-theme-alpine"
+                [rowData]="topPriceRowData"
+                [columnDefs]="priceColumnDefs"
+                class="ag-theme-alpine"
+            >
+            </ag-grid-angular>
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6 grid-margin stretch-card" *ngIf="produceData.length == 0 && priceData.length == 0 && submitClicked ">
+        <div class="card">
+          <div class="card-body">
+            <!-- <h4 class="card-title">What do I grow?</h4> -->
+            
+            <p class="card-description">
+              <b>Sorry, no relevant data found at this time for your selected region, please try again later</b>
+            </p>
+    
+          </div>
+        </div>
+      </div>
+
+    </div>

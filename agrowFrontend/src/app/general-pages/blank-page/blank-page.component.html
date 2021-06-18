@@ -1,0 +1,31 @@
+  
+  <div id="container" class="wrap left" style="width: 100%; height: 90%"></div>
+
+  <div class="wrap left" style="width: 40%; height: 500px;">
+    <form class="forms-sample" [formGroup]="growForm">
+            
+      <div class="form-group">
+
+        <label>Crop name*</label>
+        <div class="col-sm-9">
+          <select class="form-control" formControlName="cropName">
+            <option *ngFor ="let crop of cropName">{{ crop }} </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Time Period *</label>
+        <div class="col-sm-9">
+          <select class="form-control" formControlName="timePeriod">
+            <option *ngFor ="let dis of districts">{{ dis }} </option>
+          </select>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-gradient-primary mr-2" (click)="submit()" [disabled]="!growForm.valid">Submit</button>
+
+      <button class="btn btn-light" (click)="clearAll()">Cancel</button>
+    </form>
+  </div>
+
