@@ -1,28 +1,38 @@
-# AGrow
+# AGROW : Support application for Farmers
 ## Team Name - GREP Tribe
 
-1. [Short description](#short-description)
+1. [Description](#description)
 1. [Demo video](#demo-video)
-1. [AGrow UI Architecture](#agrow-ui-architecture)
-2. [AGrow Whatsapp Bot Architecture](#agrow-whatsapp-bot-architecture)
-3. [Long description](#long-description)
+1. [AGROW UI Architecture](#agrow-ui-architecture)
+2. [AGROW Whatsapp Bot Architecture](#agrow-whatsapp-bot-architecture)
 4. [Project roadmap](#project-roadmap)
 5. [Getting started](#getting-started)
 6. [Built with](#built-with)
 7. [Versioning](#versioning)
 8. [Contributors](#contributors)
 
-## Short description
-
+## Description
 
 ### What's the problem?
 
+Currently there are 150 million farmers in India and Agriculture is the primary occupation of 58% of the population. However, farmers are struggling for a decent economic growth. They have very limited guidance available on several aspects like crop diversification, modern farming techniques. 
 
 ### How can technology help?
 
-Technology can help bridge the gap between farmers and increase collaboration between them. Along with this, long waiting time for responses for Kisan Call Center can be reduced using the whatsapp bot as most of the generalised questions can be answered using the previously collected calls data.
+We propose AGROW as a solution which is a multiplatform enabled application that enables farmers to plan their yield in an efficient and cost effective manner while maximizing earnings. It is a multilingual application, available in all regional languages in India. An easy to use application, which is accessible via a Chabot and on computer browsers. It eliminates the need of downloading another app and significantly saves time by excluding call-waiting times. 
+
+It sources most recent data from Open Government data platforms thus
+Improving query resolution. AGROW considers geographical mapping and provides seasonal crop recommendations based on current market trends and prices. This in turn enables crop diversification. It will eventually be a centralized data source, which enables analytical and statistical conclusions. 
+
+AGROW would also support some key suitability goals like No Poverty and Decent Economic Growth.
+
+#### AGROW Sustainability
+
+The application will be free cost for the farmers for the first 6 months (from the date of registration) so we can build a customer base. Post which we plan to charge a subscription fee from them on a half-yearly/yearly basis and in parallel explore opportunities to tie-up with government services and NGOs.
 
 ### The idea
+
+AGROW, a solution to maximise producitvity, enable crop diversification and assist in better planning of harvest and improved ROI planner for the farmers.
 
 ![AGrow Logo](https://github.com/bmk15897/agrow/blob/main/Documentation/AGrowLogo.jpeg)
 
@@ -30,45 +40,29 @@ Technology can help bridge the gap between farmers and increase collaboration be
 
 [![Watch the video](someUrl)](someUrl)
 
-### AGrow UI Architecture
+## AGROW UI Architecture
 
 ![AGrow UI Application](https://github.com/bmk15897/agrow/blob/main/agrowFrontend/AGrowAngularUIArchitecture.png)
 
-### AGrow Whatsapp Bot Architecture
+## AGROW Whatsapp Bot Architecture
 
 ![AGrow Whatsapp Bot](https://github.com/bmk15897/agrow/blob/main/agrowWhatsappBot/AGrowWhatsappBotArchitectureWithDescription.png)
 
-## Long description
+## Go Live Approach
 
-#### Profiles 
-
-- Farmer profile - Can add, update and view crop entries. Can view the aggregated information collected by AGrow.
-
-- Admin - Can manage users. Can view the aggregated information collected by AGrow.
-
-#### Languages
-
-Currently whatsapp bot is available in English and few of the regional languages. Meanwhile the Angular UI is available in English.
-
-##### Sustainability
-
-
-
-##### Go Live Approach
-
-
-
-[More detail is available here](someUrl)
+![AGrow GoLive Approach](https://github.com/bmk15897/agrow/blob/main/Documentation/GoLiveApproach.png)
 
 ## Project roadmap
 
-![Roadmap](someUrl)
+![AGrow Logo](https://github.com/bmk15897/agrow/blob/main/Documentation/AGROWRoadmap.png)
+
+
 
 ## Getting started
 
-* [AGrow UI installion steps](https://github.com/bmk15897/agrow/blob/main/agrowFrontend/README.md)
-* [AGrow Whatsapp Bot installion steps](https://github.com/bmk15897/agrow/blob/main/agrowWhatsappBot/README.md)
-* [AGrow Backend installion steps](https://github.com/bmk15897/agrow/blob/main/agrowBackend/README.md)
+* [AGROW UI installion steps](https://github.com/bmk15897/agrow/blob/main/agrowFrontend/README.md)
+* [AGROW Whatsapp Bot installion steps](https://github.com/bmk15897/agrow/blob/main/agrowWhatsappBot/README.md)
+* [AGROW Backend installion steps](https://github.com/bmk15897/agrow/blob/main/agrowBackend/README.md)
 
 
 ## Built with
