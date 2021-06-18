@@ -36,7 +36,7 @@ Technology can help bridge the gap between farmers and increase collaboration be
 
 ### AGrow Whatsapp Bot Architecture
 
-![AGrow Whatsapp Bot](https://github.com/bmk15897/agrow/blob/main/agrowWhatsappBot/AGrowWhatsappBotArchitecture.png)
+![AGrow Whatsapp Bot](https://github.com/bmk15897/agrow/blob/main/agrowWhatsappBot/AGrowWhatsappBotArchitectureWithDescription.png)
 
 ## Long description
 
@@ -99,4 +99,7 @@ We used [Git](https://git-scm.com/) for versioning.
 * **Aditya Kumbhar** - *Developer*
 * **Bharati Kulkarni** - *Idea initiator and Developer*
 
-See also the list of [contributors](https://github.com/bmk15897/agrow/graphs/contributors) who participated in the development of this project.
+<a href="https://github.com/bmk15897/agrow/graphs/contributors">
+  <img src="https://contributors-img.web.app/image?repo=bmk15897/agrow" />
+</a>
+
