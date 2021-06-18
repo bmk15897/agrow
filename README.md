@@ -26,7 +26,7 @@ Improving query resolution. AGROW considers geographical mapping and provides se
 
 AGROW would also support some key suitability goals like No Poverty and Decent Economic Growth.
 
-#### AGROW Sustainability
+### AGROW Sustainability
 
 The application will be free cost for the farmers for the first 6 months (from the date of registration) so we can build a customer base. Post which we plan to charge a subscription fee from them on a half-yearly/yearly basis and in parallel explore opportunities to tie-up with government services and NGOs.
 
@@ -54,7 +54,7 @@ AGROW, a solution to maximise producitvity, enable crop diversification and assi
 
 ## Project roadmap
 
-![AGrow Logo](https://github.com/bmk15897/agrow/blob/main/Documentation/AGROWRoadmap.png)
+![AGrow Roadmap](https://github.com/bmk15897/agrow/blob/main/Documentation/AGROWRoadmap.png)
 
 
 

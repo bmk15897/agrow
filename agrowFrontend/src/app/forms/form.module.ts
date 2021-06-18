@@ -6,9 +6,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { WhatGrowComponent } from './what-grow/what-grow.component';
 import { AgGridModule } from 'ag-grid-angular';
+import { ChartsModule } from 'ng2-charts';
 
 const routes: Routes = [
-  { path: 'basic-elements', component: BasicElementsComponent },
+  { path: 'add-new-entry', component: BasicElementsComponent },
   { path: 'what-to-grow', component: WhatGrowComponent }
 ]
 
@@ -17,6 +18,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
+    ChartsModule,
     ReactiveFormsModule,
     AgGridModule.withComponents([]),
     RouterModule.forChild(routes),

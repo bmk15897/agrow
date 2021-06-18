@@ -16,6 +16,8 @@ export class RegisterComponent implements OnInit {
   phone: FormControl;
   areaOfLand: FormControl;
 
+  registered:boolean = false;
+
   stateList: Array<any> = [
     {  
          "state":"Andhra Pradesh",
@@ -950,6 +952,8 @@ export class RegisterComponent implements OnInit {
     }
 
     console.log("Signup req: " + JSON.stringify(req))
+
+    this.registered=true;
 
     this.cloudantService.signup(req).subscribe(data => {
       console.log("Signup response: " + JSON.stringify(data))

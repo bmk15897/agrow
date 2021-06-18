@@ -75,17 +75,22 @@
               <li>Current Mandi Price for them</li>
          </ul>
 
-         <h4 *ngIf="topProduceRowData.length > 1"><b>Based on Demand </b></h4>
+         <h4 *ngIf="topProduceRowData.length > 1"><b>Based on what people are growing around you (Production in acres)</b></h4>
 
             <ag-grid-angular
                 *ngIf="topProduceRowData.length > 1"
-                style="width: 40%; height: 300px; padding-bottom: 3%;"
+                style="width: 70%; height: 300px; padding-bottom: 3%;"
                 class="ag-theme-alpine"
                 [rowData]="topProduceRowData"
                 [columnDefs]="produceColumnDefs"
                 class="ag-theme-alpine"
             >
             </ag-grid-angular>
+
+            <div class="card-body">
+                <h4 class="card-title">Production in acres</h4>
+                <canvas baseChart [chartType]="'bar'" [datasets]="produceChartData" [labels]="produceChartLabels" [options]="produceChartOptions" [colors]="produceChartColors"></canvas>
+            </div>
 
             <h4 *ngIf="topPriceRowData.length > 1"><b>Based on mandi prices (Modal price per quintal) </b></h4>
 
@@ -98,6 +103,11 @@
                 class="ag-theme-alpine"
             >
             </ag-grid-angular>
+
+            <div class="card-body">
+                <h4 class="card-title">Price per Quintal</h4>
+                <canvas baseChart [chartType]="'bar'" [datasets]="priceChartData" [labels]="priceChartLabels" [options]="priceChartOptions" [colors]="priceChartColors"></canvas>
+            </div>
           
         </div>
       </div>
