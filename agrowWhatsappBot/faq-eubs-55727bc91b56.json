@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "faq-eubs",
+  "private_key_id": "55727bc91b5652f65c50bbe2e813286f258e9ec0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDg1YH28i7WZgpu\n8X5J2Kxv87y84p0KhsE9KZAs+jgY7x/NyolMAPVez4UBtZZUDkojekD+140ZMFc7\nsxnswWbow0oFm0IYtGcOqYdPVoSo0sRfjDwKHDNS9hiWm8MzeDDCRRHY1xE/0GlE\noVroNiNwGIJ7J38JfftwNi3FGLhuTcEnkT7byqGipVd9Q7jCZXGJhapePW9XDxNe\nGrcNeBv3tNses6LIY1B75ATrjIXT9akw4ZwWZnLNpSUu6ka8AKxLARTArtr5rg8v\nGxyqHbJfIb7oboV8BULT6aajeq1C31jCwb4/aeukqjR6IYN8DovQ4+1J+Krn5zlF\nJNhz08LfAgMBAAECggEALICWVPbi5nUUI5mRUbSdjRtFhG2mf+rkXOLZMs3kRKsw\nNF+ehXi7GKUiwo/azZB2hEcyjj7EIvQ6kAqHWyF86R2ejTWKA7HRpElSCxYo8/Gk\nBPWQ/L9QOV+UxlrWbF2h6RIa0jzfoS3zaC43/DabFRkE2rOapZpWJoPS02xtNQe3\n2TGNRH8RZcuoQZxpiZ36cLkUgmAr1pGCUjcRNBOrpP5iwLcFcA7smeC/VHfja3Z5\n7xbpm7zpk8cTL3wY/DvwJI9zVPapKwunB1814IYfGquyWSyMziZHj+UPu98ujlBP\nIuEbSlHGWJwe3sEtWMHQKMIXKI7c3mpKuiG5zmdjAQKBgQD77r3qHr5zZFqaRx3a\ncUSZW1N7BcIf6sLvJ+XYXV5iYuIGtU2VTVGm1Mf3+LAI1qW6TRxlYEYNIvREFE1l\nn5wxA5Pf6A6FFa+ueZykPlVwyy2O203jg4ppMQ3Fhjdl+XoZFUEnfdWqdkmQWlTM\n67IanRKCZq1Y2Q+FEV4YyB3ZvwKBgQDkdsPjqDN0e3L1J4ftgxs9Fye9mtstgQgo\nPjseF882NpvknKyU9WruE8hFrpghCb9J9GjrgkrrYFE5s8Tka3iuvNE5ftVC/Y3E\n+yc3xmeQG1u8Y1nTGLSFXXWAodK9+1jToDxXse2ZyGsSRETHGl0OPaQbqNbbYxZb\n8JcSFK0e4QKBgAIx60+t4uToe+2aLwVnNTzM0eZhf3Z9uiMRSuxeq+LZj7SVQc7K\nNKrqca+UaBw7mogMAfJUK2gT5OLu9lmrUVYP/OrXf8DjFnvDrXy02lO4QXZcLMqN\nq9gMyFzvNW5bBRhQ2hd4/jKVA0ERuGlsqEmZEr82G86JXZxAMXyvyarLAoGAUL5Q\nuRLnLJG8rTwNZDnj1JFscCxcrhZeRarIxffwOd7O9dsRe4vJAN9o9oegKH0DaCXD\nNwjTZaCi1FveiEQbYNZGs6VJxeVKx4Vj9OhgDaQ9pbUPN/YRRtkjABUxIAfG+vQ0\nn2G48ZLNlKUgEaYVoUTTzRq85Mh+THwZSECadsECgYA77XARljnYqcRWlLpczz9i\nfEIhsXgwScQGJ5li2KegR+9cWqHi/YdZxL00dSpR9Eq0PYkc3j+xddC87XZ4NDAW\nbv784n9vfhVUxHa25X+TMzqGEaBjQ7K1+XF/Z5XDReE0otUAgUBicJPGEco3PXrs\nRaPhTk43XdiZsSVpSWhsPg==\n-----END PRIVATE KEY-----\n",
+  "client_email": "whatsapp-chatbot-ifarm@faq-eubs.iam.gserviceaccount.com",
+  "client_id": "111326624424509173016",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/whatsapp-chatbot-ifarm%40faq-eubs.iam.gserviceaccount.com"
+}
