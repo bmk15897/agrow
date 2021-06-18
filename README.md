@@ -24,7 +24,7 @@ Technology can help bridge the gap between farmers and increase collaboration be
 
 ### The idea
 
-
+![AGrow Logo](https://github.com/bmk15897/agrow/blob/main/Documentation/AGrowLogo.jpeg)
 
 ## Demo video
 
@@ -48,7 +48,7 @@ Technology can help bridge the gap between farmers and increase collaboration be
 
 #### Languages
 
-Currently whatsapp bot is available most of the regional languages.
+Currently whatsapp bot is available in English and few of the regional languages. Meanwhile the Angular UI is available in English.
 
 ##### Sustainability
 
